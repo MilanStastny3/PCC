@@ -1,0 +1,162 @@
+/* GENERAL */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(185, 75%, 39%);
+  color: hsl(227, 10%, 46%);
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.top-circle,
+.bottom-circle {
+  position: absolute;
+}
+
+.top-circle {
+  transform: translate(-40%, -50%);
+  z-index: -1;
+}
+
+.bottom-circle {
+  bottom: 0;
+  right: 0;
+
+  transform: translate(45%, 65%);
+  z-index: -1;
+}
+
+/* MAIN CONTENT */
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  position: absolute;
+  width: 350px;
+  background-color: #fff;
+  border-radius: .6em;
+  top: 50%;
+  transform: translate(0, 50%);
+}
+
+.bg-card-img {
+  border-radius: .6em .6em 0 0;
+}
+
+.personal-img {
+  border: solid .25em #fff;
+  border-radius: 50%;
+
+  display: block;
+  margin: -56px auto 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.base-info {
+  padding: 1.25em 0 1.25em 0; /* 20/16 */
+  border-bottom: 1px solid hsl(227, 21%, 74%);
+}
+
+h2, h3 {
+  text-align: center;
+  line-height: 1.7em;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.125em;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+.name {
+  font-weight: 700;
+  color: hsl(231, 8%, 17%);
+}
+
+.stats {
+  width: 90%;
+  margin: 0 auto;
+  padding: 1.25em;
+}
+
+.stats li {
+  display: inline-block;
+  width: 32%;
+
+  line-height: 1.6em;
+  text-align: center;
+}
+
+.stats h4 {
+  color: hsl(231, 8%, 17%);
+}
+
+.stats p {
+  font-size: .75em;
+  letter-spacing: .1em;
+}
+
+/* FOOTER */
+
+.attribution {
+  color: #81f1fc;
+  padding: .5em 0 0 .5em;
+}
+
+.attribution p {
+  display: inline-block;
+}
+
+.attribution a {
+  color: #158690;
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  letter-spacing: .08em;
+  transition: ease-out .3s;
+}
+
+@media (max-width: 1000px) {
+
+  .attribution {
+    text-align: center;
+  }
+
+} 
+
+@media (max-width: 550px) {
+
+  .attribution p {
+    display: block;
+    font-size: .8em;
+  }
+
+}
+
+@media (max-width: 350px) {
+  
+  body {
+    overflow: scroll;
+  }
+
+}
